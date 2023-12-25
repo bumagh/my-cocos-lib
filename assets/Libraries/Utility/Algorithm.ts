@@ -115,4 +115,17 @@ export class Algorithm
         }
         return result;
     }
+
+    public static PickRandom<T>(array: T[], count: number): T[] {
+        const result = [];
+        const pool = array.slice(0);
+
+        for (let i = 0; i < count; i++) {
+            const randomIndex = Math.floor(Math.random() * pool.length);
+            result.push(pool[randomIndex]);
+            pool.splice(randomIndex, 1);
+        }
+
+        return result;
+    }
 }
