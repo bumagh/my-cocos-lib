@@ -57,7 +57,7 @@ export class List<T>
      */
     public Find<TFunction extends (item: T) => boolean>(predicate: TFunction): T
     {
-        return this.items.find(predicate) as T;
+        return this.items.find(predicate);
     }
 
     /**
