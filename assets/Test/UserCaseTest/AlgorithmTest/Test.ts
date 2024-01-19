@@ -4,15 +4,22 @@ import { Debug } from '../../../Libraries/Utility/Debug';
 const { ccclass, property } = _decorator;
 
 @ccclass('Test')
-export class Test extends Component {
-    start() {
-        const nums = [0,1,2,3,4,5,6,7,8];
-        var res = Algorithm.PickRandom(nums, 10);
-        Debug.Log(res);
+export class Test extends Component
+{
+    start()
+    {
+        this.TestGetRandomValue();
     }
 
-    update(deltaTime: number) {
-        
+    update(deltaTime: number)
+    {
+
+    }
+    private TestGetRandomValue()
+    {
+        var mapKeyValue: Map<string, number> = new Map<string, number>([["name1", 1], ["name2", 2], ["name3", 3], ["name4", 4]]);
+        var randKeyValue = Algorithm.GetRandomValue(mapKeyValue);
+        Debug.Log(randKeyValue[0] + ":" + randKeyValue[1]);
     }
 }
 

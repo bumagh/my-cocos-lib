@@ -8,12 +8,12 @@ export class Algorithm
     /**
      * 随机获取Map的一个元素的值
      */
-    public static GetRandomValue<TKey, TValue>(map: Map<TKey, TValue>): TValue
+    public static GetRandomValue<TKey, TValue>(map: Map<TKey, TValue>): [TKey, TValue]
     {
         var keys = Array.from(map.keys());
         var randomIndex = Math.floor(Math.random() * keys.length);
         var randomKey = keys[randomIndex];
-        return map.get(randomKey);
+        return [randomKey, map.get(randomKey)];
     }
 
     /**
@@ -101,11 +101,9 @@ export class Algorithm
 
         const result = [];
         const usedIndices = new Set();
-        var seed = new Date().getMilliseconds();
         while (result.length < count)
         {
-            seed++;
-            const randomIndex = Math.floor(math.pseudoRandomRange(seed, 0, 1) * array.length);
+            const randomIndex = this.GetRandomNumber(array.length - 1, 0);
             // 检查该索引是否已经被使用过  
             if (!usedIndices.has(randomIndex))
             {
@@ -116,16 +114,94 @@ export class Algorithm
         return result;
     }
 
-    public static PickRandom<T>(array: T[], count: number): T[] {
-        const result = [];
-        const pool = array.slice(0);
+    public static GetRandomNumber(max: number, min: number): number
+    {
+        return Math.round(Math.random() * (min - max) + max);
+    }
 
-        for (let i = 0; i < count; i++) {
-            const randomIndex = Math.floor(Math.random() * pool.length);
-            result.push(pool[randomIndex]);
-            pool.splice(randomIndex, 1);
+    public static GetRandomItemByWeight<T>(map: Map<T, number>, seed: number): [T, number] | null
+    {
+        if (map.size === 0)
+            return null;
+
+        var totalWeight: number = 0;
+        for (const item of map)
+            totalWeight += item[1];
+
+        const randomValue = math.pseudoRandomRange(seed, 0, totalWeight);
+        var currentWeight: number = 0;
+        var tempItem: [T, number];
+
+        for (const item of map)
+        {
+            currentWeight += item[1];
+            if (randomValue <= currentWeight)
+                return item;
+            tempItem = item;
         }
 
-        return result;
+        return tempItem;
+    }
+
+    /**
+     * 移除集合中的指定元素
+     */
+    public static RemoveItemFromArray<T>(array: T[], element: T): boolean
+    {
+        if (Validator.IsObjectIllegal(array, "array")) return false;
+        if (Validator.IsObjectIllegal(element, "element")) return false;
+        if (array.length == 0) return false;
+        const index = array.indexOf(element);
+        if (index !== -1)
+        {
+            array.splice(index, 1);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 将Map转换成二维数组
+     */
+    public static ConvertMapToArray<TKey, TValue>(map: Map<TKey, TValue>): [TKey, TValue][]
+    {
+        var array = new Array<[TKey, TValue]>();
+        for (const item of map)
+            array.push(item);
+        return array;
+    }
+
+    /**
+     * 洗牌算法
+     */
+    public static Shuffle<T>(array: T[]): T[]
+    {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // 当还剩有元素未洗牌  
+        while (0 !== currentIndex)
+        {
+            // 选取剩下的元素
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // 并与当前元素交换
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    /**
+     * 截断字符串
+     */
+    public static TruncateString(target: string, maxLength: number = 4, suffix = "..."): string
+    {
+        if (target.length > maxLength)
+            return `${target.substring(0, maxLength)}${suffix}`;
+        else
+            return target;
     }
 }
