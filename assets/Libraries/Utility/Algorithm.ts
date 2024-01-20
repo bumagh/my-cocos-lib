@@ -8,7 +8,7 @@ export class Algorithm
     /**
      * 随机获取Map的一个元素的值
      */
-    public static GetRandomValue<TKey, TValue>(map: Map<TKey, TValue>): [TKey, TValue]
+    public static RandomItemFromMap<TKey, TValue>(map: Map<TKey, TValue>): [TKey, TValue]
     {
         var keys = Array.from(map.keys());
         var randomIndex = Math.floor(Math.random() * keys.length);
@@ -49,7 +49,7 @@ export class Algorithm
             {
                 const numStr = num.toString();
                 const dotIndex = numStr.indexOf(".");
-                formattedNum = numStr.substring(0, dotIndex) + "W";
+                formattedNum = numStr.substring(0, dotIndex == -1 ? numStr.length : dotIndex) + "W";
             }
             else
             {
