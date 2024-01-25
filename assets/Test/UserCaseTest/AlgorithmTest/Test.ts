@@ -9,7 +9,7 @@ export class Test extends Component
 {
     start()
     {
-        this.TestFormatBigNumber(90000000);
+        this.TestConvertToNewlines();
     }
 
     update(deltaTime: number)
@@ -35,6 +35,20 @@ export class Test extends Component
     {
         var bigNum = Algorithm.FormatBigNumber(num);
         Debug.Log(bigNum);
+    }
+
+    private TestRemoveColonAndBracesToArray()
+    {
+        var strArr = Algorithm.RemoveColonAndBracesToArray("{http://},{http://}");
+        strArr.forEach(str =>
+        {
+            Debug.Log(str);
+        });
+    }
+    private TestConvertToNewlines()
+    {
+        var res = Algorithm.ConvertToNewlines("你好cocos");
+        Debug.Log(res);
     }
 }
 
