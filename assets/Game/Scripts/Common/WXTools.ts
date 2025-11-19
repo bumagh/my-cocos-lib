@@ -1,5 +1,5 @@
 import { view } from 'cc';
-import 'minigame-api-typings';
+// import 'minigame-api-typings';
 
 export class WXTools
 {

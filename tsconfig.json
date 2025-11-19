@@ -1,9 +1,14 @@
 {
   /* Base configuration. Do not edit this field. */
   "extends": "./temp/tsconfig.cocos.json",
-
+ 
   /* Add your custom configuration here. */
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "types": [
+      "cc",
+      "minigame-api-typings"
+    ],
     "strict": false
   }
 }

@@ -1,4 +1,4 @@
-import 'minigame-api-typings';
+// import 'minigame-api-typings';
 import { EventManager } from '../../Libraries/Utility/EventManager';
 import { Debug } from '../../Libraries/Utility/Debug';
 import { sys } from 'cc';

@@ -1,0 +1,10 @@
+node_modules/
+library/
+temp/
+build/
+settings/
+local/
+*.log
+.DS_Store
+thumbs.db
+project.json
