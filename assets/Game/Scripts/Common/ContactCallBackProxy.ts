@@ -1,6 +1,6 @@
 import { _decorator, CCObject, CCString, Collider2D, Component, Contact2DType, EventTouch, Input, IPhysics2DContact, Node, PhysicsSystem2D } from 'cc';
-import { EventManager } from '../../../Libraries/Utility/EventManager';
-import { Debug } from '../../../Libraries/Utility/Debug';
+import { EventManager } from '../../../MyLib/Utility/EventManager';
+import { Debug } from '../../../MyLib/Utility/Debug';
 const { ccclass, property } = _decorator;
 @ccclass('ContactCallBackProxy')
 export class ContactCallBackProxy extends Component {

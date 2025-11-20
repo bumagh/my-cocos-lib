@@ -1,6 +1,6 @@
 import { Color, Sprite, Tween, TweenEasing, Vec3, tween, Node, Quat } from "cc";
-import { Validator } from "../../../Libraries/Utility/Validator";
-import { EventManager } from "../../../Libraries/Utility/EventManager";
+import { Validator } from "../../../MyLib/Utility/Validator";
+import { EventManager } from "../../../MyLib/Utility/EventManager";
 
 export class TweenAnimator
 {

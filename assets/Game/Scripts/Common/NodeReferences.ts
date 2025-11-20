@@ -1,7 +1,7 @@
 import { _decorator, CCString, Component, find, Node } from 'cc';
-import { Validator } from '../../../Libraries/Utility/Validator';
-import { EventManager } from '../../../Libraries/Utility/EventManager';
-import { Debug } from '../../../Libraries/Utility/Debug';
+import { Validator } from '../../../MyLib/Utility/Validator';
+import { EventManager } from '../../../MyLib/Utility/EventManager';
+import { Debug } from '../../../MyLib/Utility/Debug';
 const { ccclass, property, executionOrder } = _decorator;
 
 export interface INodeReferencesListener

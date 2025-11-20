@@ -1,7 +1,7 @@
 
-import { Debug } from "../../../Libraries/Utility/Debug";
-import { EventManager } from "../../../Libraries/Utility/EventManager";
-import { Validator } from "../../../Libraries/Utility/Validator";
+import { Debug } from "../../../MyLib/Utility/Debug";
+import { EventManager } from "../../../MyLib/Utility/EventManager";
+import { Validator } from "../../../MyLib/Utility/Validator";
 import { NoticeType } from "./Enums";
 import { NetEndGameQueryData, NetStartDownQueryData, NetStopDownQueryData, NetUpTeamIntegralQueryData, NetUpTeamIntegralRespData } from "./NetAPITypes";
 import { Tools } from "./Tools";

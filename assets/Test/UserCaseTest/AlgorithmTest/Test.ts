@@ -1,7 +1,7 @@
 import { _decorator, Component, Node } from 'cc';
-import { Algorithm } from '../../../Libraries/Utility/Algorithm';
-import { Debug } from '../../../Libraries/Utility/Debug';
-import { List } from '../../../Libraries/Utility/List';
+import { Algorithm } from '../../../MyLib/Utility/Algorithm';
+import { Debug } from '../../../MyLib/Utility/Debug';
+import { List } from '../../../MyLib/Utility/List';
 const { ccclass, property } = _decorator;
 
 @ccclass('Test')

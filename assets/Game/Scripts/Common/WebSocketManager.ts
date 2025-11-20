@@ -1,7 +1,7 @@
 import { IEntity } from "../../../Framework/PartyTemplate/IEntity";
-import { Debug } from "../../../Libraries/Utility/Debug";
-import { EventManager } from "../../../Libraries/Utility/EventManager";
-import { Validator } from "../../../Libraries/Utility/Validator";
+import { Debug } from "../../../MyLib/Utility/Debug";
+import { EventManager } from "../../../MyLib/Utility/EventManager";
+import { Validator } from "../../../MyLib/Utility/Validator";
 
 export abstract class WebSocketManager implements IEntity
 {
