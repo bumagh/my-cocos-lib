@@ -1,5 +1,5 @@
 import { Sprite, assetManager, ImageAsset, SpriteFrame, Texture2D, director, sys } from "cc";
-import { Validator } from "../../../MyLib/Utility/Validator";
+import { Validator } from "../../../MyLib/Scripts/Common/Utility/Validator";
 
 export class Tools
 {

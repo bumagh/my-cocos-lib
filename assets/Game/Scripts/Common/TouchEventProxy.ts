@@ -1,5 +1,5 @@
 import { _decorator, CCString, Component, EventTouch } from 'cc';
-import { EventManager } from '../../../MyLib/Utility/EventManager';
+import { EventManager } from '../../../MyLib/Scripts/Common/Utility/EventManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('TouchEventProxy')

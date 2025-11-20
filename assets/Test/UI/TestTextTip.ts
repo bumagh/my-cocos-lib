@@ -1,7 +1,7 @@
 import { _decorator, Component, Node } from 'cc';
-import { TextTip } from '../../MyLib/UI/Tip/TextTip';
-import { UIManager } from '../../MyLib/Manager/UIManager';
-import { PublicIP } from '../../MyLib/Utility/Net/PublicIP';
+import { TextTip } from '../../MyLib/Scripts/GamePlay/UI/Tip/TextTip';
+import { PublicIP } from '../../MyLib/Scripts/Common/Utility/Net/PublicIP';
+import { UIManager } from '../../MyLib/Scripts/Core/Manager/UIManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('TestTextTip')

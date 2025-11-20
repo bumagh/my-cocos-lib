@@ -1,7 +1,7 @@
 import { _decorator, AudioSource, Component, Node } from 'cc';
-import { Debug } from '../../../../MyLib/Utility/Debug';
+import { Debug } from '../../../../MyLib/Scripts/Common/Utility/Debug';
 import { AudioPlayer } from './AudioPlayer';
-import { Validator } from '../../../../MyLib/Utility/Validator';
+import { Validator } from '../../../../MyLib/Scripts/Common/Utility/Validator';
 const { ccclass, property } = _decorator;
 
 @ccclass('AudioController')

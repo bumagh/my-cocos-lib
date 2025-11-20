@@ -1,8 +1,8 @@
 // import 'minigame-api-typings';
-import { EventManager } from '../../MyLib/Utility/EventManager';
-import { Debug } from '../../MyLib/Utility/Debug';
+import { EventManager } from '../../MyLib/Scripts/Common/Utility/EventManager';
+import { Debug } from '../../MyLib/Scripts/Common/Utility/Debug';
 import { sys } from 'cc';
-import { Validator } from '../../MyLib/Utility/Validator';
+import { Validator } from '../../MyLib/Scripts/Common/Utility/Validator';
 import { Tools } from './Common/Tools';
 
 export class NetworkAPIManager 

@@ -1,5 +1,5 @@
 import { _decorator, Component, Vec3, tween, isValid, UIOpacity, Color, Label, UITransform } from 'cc';
-import { PoolManager } from '../../Manager/PoolManager';
+import { PoolManager } from '../../../Core/Manager/PoolManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('TextTip')

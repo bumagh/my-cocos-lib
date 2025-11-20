@@ -23,8 +23,7 @@ export class EventManager
     public static On<TFunction extends (...any: any[]) => void>(type: string, callback: TFunction, target?: unknown)
     {
         var list: List<Event>;
-        if (!EventManager.events.has(type))
-        {
+        if (!EventManager.events.has(type)) {
             list = new List<Event>();
             EventManager.events.set(type, list);
         }
@@ -34,8 +33,7 @@ export class EventManager
 
     public static Off<TFunction extends (...any: any[]) => void>(type: string, callback: TFunction, target?: unknown)
     {
-        if (!EventManager.events.has(type))
-        {
+        if (!EventManager.events.has(type)) {
             Debug.Error(`注销事件时，未找到事件${type}`);
             return;
         }
@@ -49,16 +47,14 @@ export class EventManager
 
     public static Apply(onApply: boolean, type: string, ...any: any[]): void
     {
-        if (!EventManager.events.has(type))
-        {
+        if (!EventManager.events.has(type)) {
             Debug.Warn(`发送事件时，未找到事件${type}`);
             return;
         }
         var list: List<Event> = EventManager.events.get(type);
         // 将事件数组写入新的临时数组，防止事件在执行时改变原本的数组
         var tempEventArray = list.items.filter(item => item != null);
-        for (var event of tempEventArray)
-        {
+        for (var event of tempEventArray) {
             event.callback.apply(event.target, any);
             if (onApply)
                 EventManager.onCallbackApply(type, ...any);

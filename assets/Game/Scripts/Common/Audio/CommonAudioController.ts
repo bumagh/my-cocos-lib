@@ -1,7 +1,7 @@
 import { _decorator, director } from "cc";
-import { EventManager } from "../../../../MyLib/Utility/EventManager";
+import { EventManager } from "../../../../MyLib/Scripts/Common/Utility/EventManager";
 import { AudioController } from "./AudioController";
-import { Validator } from "../../../../MyLib/Utility/Validator";
+import { Validator } from "../../../../MyLib/Scripts/Common/Utility/Validator";
 import { ReadyButton } from "../ReadyButton";
 
 const { ccclass, property } = _decorator;

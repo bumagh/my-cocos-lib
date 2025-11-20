@@ -9,7 +9,8 @@ const { ccclass, property } = _decorator;
  * 每一个使用 InfiniteList 的用户，都需要实现这个 cell 的 interface
  */
 @ccclass('InfiniteCell')
-export default abstract class InfiniteCell extends Component {
+export default abstract class InfiniteCell extends Component
+{
     /**
      * cellIdentifier 是一个独特的字符串，用来表示这个 cell 使用的是哪种类型的资源，
      * 这样在同一个 scroll 中可以使用多种不同的 cell 类型

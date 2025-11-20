@@ -1,8 +1,8 @@
 import { ImageAsset, Sprite, SpriteFrame, Texture2D, assetManager } from "cc";
 import { IEntity } from "../../../Framework/PartyTemplate/IEntity";
-import { Validator } from "../../../MyLib/Utility/Validator";
-import { EventManager } from "../../../MyLib/Utility/EventManager";
-import { Debug } from "../../../MyLib/Utility/Debug";
+import { Validator } from "../../../MyLib/Scripts/Common/Utility/Validator";
+import { EventManager } from "../../../MyLib/Scripts/Common/Utility/EventManager";
+import { Debug } from "../../../MyLib/Scripts/Common/Utility/Debug";
 
 /**
  * 远程图片管理器
